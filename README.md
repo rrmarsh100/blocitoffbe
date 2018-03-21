@@ -1,0 +1,3 @@
+# README
+
+BlocItOff- Scheduling application

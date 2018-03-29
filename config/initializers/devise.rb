@@ -1,7 +1,3 @@
-# frozen_string_literal: true
-
-# Use this hook to configure devise mailer, warden hooks and so forth.
-# Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
@@ -9,7 +5,7 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '059b978e6164c5a4f010d4a43515c1f275d70872ff920fc47c13f44db3c15797e5b4831948a3a0f3573817585be4aeeb87054a86708b87cff9044c8ceb4d5358'
-  
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'

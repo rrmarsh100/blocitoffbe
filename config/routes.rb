@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'items/create'
 
   devise_for :users
 
@@ -7,8 +6,8 @@ Rails.application.routes.draw do
 
   root 'users#show'
 
-  resources :users do
-    resources :items
-  end
+  resources :users, only: [:show] do
+     resources :items, only: [:create]
+   end
 
 end

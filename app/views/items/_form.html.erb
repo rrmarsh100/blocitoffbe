@@ -1,9 +1,6 @@
-<h4> Create a new to-do item </h4>
-
-<%= form_for [@user, @item] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, class: 'form-control', placeholder: "Enter task here" %>
-
-
-  <%= f.submit "Save", class: "btn btn-success" %>
-<% end %>
+<div class="form-group">
+    <%= form_for [@user, Item.new] do |t| %>
+        <%= t.text_field :name, placeholder: "Add new item" %>
+        <%= t.submit "Add", class: "btn btn-success" %>
+    <% end %>
+</div>

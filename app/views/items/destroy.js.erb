@@ -1,0 +1,5 @@
+<% if flash[:alert].present? %>
+  $('#flash-message').text('<%= flash[:alert] %>')
+<% else %>
+  $('#item_<%= @item.id %>').remove();
+<% end %>

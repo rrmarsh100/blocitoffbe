@@ -1,12 +1,10 @@
-<% @user.items.each do |item| %>
-  <div class="media">
-    <div class="media-body">
-      <h4 class="media-heading">
+<div class="form-group" style="padding:10px">
+  <ul>
+    <% @user.items.each do |item| %>
+      <li id="item_<%= item.id %>">
         <%= item.name %>
-      </h4>
-      <small>
-        submitted <%= time_ago_in_words(item.created_at) %> ago <br>
-      </small>
-    </div>
-  </div>
-<% end %>
+        <%= link_to "", [@user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+      </li>
+    <% end %>
+  </ul>
+</div>

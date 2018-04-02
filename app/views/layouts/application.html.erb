@@ -17,6 +17,14 @@
   <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 
+  <div id="flash-message">
+    <% flash.each do |key, value| %>
+        <div class="<%= flash_class(key) %>">
+              <%= value %>
+        </div>
+    <% end %>
+  </div>
+
     <%= yield %>
   </body>
 </html>

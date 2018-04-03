@@ -1,10 +1,13 @@
 <div class="form-group" style="padding:10px">
   <ul>
     <% @user.items.each do |item| %>
-      <li id="item_<%= item.id %>">
-        <%= item.name %>
-        <%= link_to "", [@user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
-      </li>
+    <li id="item_<%= item.id %>">
+      <%= item.name %>
+      <%= link_to "", [@user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+      <small>
+        <%= distance_of_time_in_words(Time.now, item.created_at.to_date + 7 ) %> to complete
+      </small>
+    </li>
     <% end %>
   </ul>
 </div>

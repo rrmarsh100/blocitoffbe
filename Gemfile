@@ -45,7 +45,7 @@ group :development, :test do
   gem 'rails-controller-testing'
 end
 
- gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.0.0'
 
  gem 'devise'
 
